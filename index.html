@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>Book Search</title>
+  <link rel="shortcut icon" href="#">
   <!-- meta -->
   <meta name="description" content="Book Search using Google Books API">
   <meta name="author" content="HiranyaGarbh">
@@ -18,14 +19,18 @@
 
       <h1>Book Search</h1>
 
-      <div class="wrap">
-        <div class="search">
-           <input type="text" class="searchTerm" placeholder="what are you looking for?">
+      <div class="wrap" id="search">
+        <form class="search" id="myform">
+           <input type="text" id="books" class="searchTerm" placeholder="what are you looking for?">
            <button type="submit" class="searchButton">
              <i class="fa fa-search"></i>
           </button>
-        </div>
+        </form>
      </div> <!-- /wrap -->
+
+     <div id="result">
+       
+     </div>
 
     </div> <!-- /continer -->
 
@@ -40,6 +45,7 @@
      </footer>
 
     <!-- js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
 </html>
