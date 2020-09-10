@@ -16,21 +16,22 @@
 
 <body>
     <div class="container">
+      <div class="alert alert-primary" role="alert">
+        This is a primary alert—check it out!
+      </div>
 
       <h1>Book Search</h1>
 
       <div class="wrap" id="search">
-        <form class="search" id="myform">
-           <input type="text" id="books" class="searchTerm" placeholder="what are you looking for?">
+        <form class="search" id="bookSearchForm">
+           <input type="text" id="bookName" class="searchTerm" placeholder="what are you looking for?">
            <button type="submit" class="searchButton">
              <i class="fa fa-search"></i>
           </button>
         </form>
      </div> <!-- /wrap -->
 
-     <div id="result">
-       
-     </div>
+     <div id="result"></div>
 
     </div> <!-- /continer -->
 
