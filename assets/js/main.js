@@ -1,11 +1,11 @@
 $(document).ready(function(){
     
     // target myform - submit is event handler
-    $("#myform").submit(function(){
-        var search = $("#books").val();     // collect value that was entred into the field by .val() method
+    $("#bookSearchForm").submit(function(){
+        var search = $("#bookName").val();     // collect value that was entred into the field by .val() method
 
         if(search == "") {
-            alert('Please enter some book name.');
+            alert('Please enter the book name.');
         }
         else {
             var url = '';       // url of the book
@@ -14,14 +14,15 @@ $(document).ready(function(){
             var author = '';    // author of the book
 
             // send get request to the API
+            // concatinate the URL with search field value
             $.getJSON("https://www.googleapis.com/books/v1/volumes?q=" + search +".json", function(response){
+
                 console.log(response);
-            }); // concatinate the URL with search field value
+                // append response in HTML tags here.
 
+            });
         }
-
-
+        return false; // prevents auto submit of form
     });
-    
-    return false; // prevents auto submit of form
+ 
 });
