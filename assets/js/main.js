@@ -2,10 +2,13 @@ $(document).ready(function(){
     
     // target myform - submit is event handler
     $("#bookSearchForm").submit(function(){
-        var search = $("#bookName").val();     // collect value that was entred into the field by .val() method
+        var search = $("#bookName").val();      // collect value that was entred into the field by .val() method
+        
+        var pattern=/^[a-zA-Z0-9_]+( [a-zA-Z0-9_]+)*$/  // should be in the word\word\word format
+                                                        // starts with AlphaNumeric - ends with AlphaNumeric - one or more occurences
 
-        if(search == "") {
-            alert('Please enter the book name.');
+        if (!pattern.test(search)) {
+            alert('Empty or invalid search character');
         }
         else {
             var url = '';       // url of the book
